@@ -1,0 +1,62 @@
+.chatbox {
+    border: 2px solid black;
+    display: flex;
+    background-color: aqua;
+    flex-direction: column;
+}
+
+.chatuser {
+    background-color: #0ab827;
+    display: flex;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+
+
+.chatview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: blue;
+}
+
+.chatsend {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background-color: red;
+}
+
+.chatleft {
+     padding: 10px;
+    width: fit-content;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #f0f0f0; /* light gray */
+    justify-content: center;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.chatright {
+    padding: 10px;
+    width: fit-content;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #cce5ff; /* light blue */
+    justify-content: center;
+    text-align: right;
+    align-self: flex-end; 
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
