@@ -1,0 +1,21 @@
+.chatlist{
+    border: 2px solid black;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+
+.chats_user{
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid black;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
