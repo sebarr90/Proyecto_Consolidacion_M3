@@ -1,9 +1,13 @@
 .chatlist{
     border: 2px solid black;
+    width: 30%;
+
 }
 
 ul{
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -12,6 +16,18 @@ ul{
     padding: 10px;
     background-color: #f0f0f0;
     border-bottom: 2px solid black;
+    display: flex;
+}
+
+.person{
+    padding: 10px;
+  
+}
+
+.user-time{
+    padding: 10px;
+    display: inline-block;
+    position: relative;
 }
 
 img {
