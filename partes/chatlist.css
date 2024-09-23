@@ -10,7 +10,10 @@ ul{
     flex-direction: column;
 }
 
-
+.chats{
+    display: flex;
+    position: right;
+}
 
 .chats_user{
     padding: 10px;
