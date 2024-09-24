@@ -7,6 +7,16 @@
     background-color: #5fb4f6 !important;
 }
 
+.btn-outline-success {
+    
+    border-color: whitesmoke !important;
+    color: whitesmoke;
+}
+
+.d-flex{
+    border-color: whitesmoke !important;
+}
+
 form{
     padding: 10px;
 }
@@ -54,18 +64,34 @@ section {
     padding: 10px;
 }
 
+
 .chatleft {
     padding: 10px;
     width: fit-content;
     margin: 10px;
-    display: flex;
-    flex-direction: column;
+    display: inline-block;
+   
     border-radius: 20px;
     background-color: #9bc8f7;
-    justify-content: center;
     text-align: left;
-    align-self: flex-start;
+    
 }
+
+.mensaje{
+    display: inline-block;
+    flex-direction: row;
+    
+}
+.chat-avatar{
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-hour{
+    display: flex;
+    align-self: flex-end;
+}
+
 
 .chatright {
     padding: 10px;
@@ -88,7 +114,7 @@ section {
 
 }
 
-ul {
+ul  {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -116,6 +142,11 @@ ul {
     padding: 10px;
     display: inline-block;
     position: relative;
+}
+
+.card-footer{
+    padding: 10px;
+   
 }
 
 img {
