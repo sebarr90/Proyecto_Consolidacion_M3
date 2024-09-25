@@ -3,21 +3,21 @@
     margin: 0;
 }
 
-.navbar{
+.navbar {
     background-color: #5fb4f6 !important;
 }
 
 .btn-outline-success {
-    
+
     border-color: whitesmoke !important;
     color: whitesmoke;
 }
 
-.d-flex{
+.d-flex {
     border-color: whitesmoke !important;
 }
 
-form{
+form {
     padding: 10px;
 }
 
@@ -34,17 +34,17 @@ section {
     border-top: 2px solid whitesmoke;
     border-bottom: 2px solid whitesmoke;
     display: flex;
-    
+
     flex-direction: column;
     width: 70%;
-    
+
     background-image: url(fondo.jpg);
-   
+
 }
 
 
 
-.user-time{
+.user-time {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,7 +56,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
 
 .chatsend {
@@ -66,7 +66,7 @@ section {
     padding: 10px;
 }
 
-.chatbox-header{
+.chatbox-header {
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -74,24 +74,24 @@ section {
     background-color: rgb(97, 194, 221);
 }
 
-.chatbox-avatar{
+.chatbox-avatar {
     display: flex;
     margin: 0;
     flex-direction: row;
-    
+
 }
 
-.chat-name{
+.chat-name {
     padding: 10px;
 }
 
-.status{
+.status {
     font-size: 12px;
     display: flex;
-    align-self:center;
-    padding: 10px;
+    align-self: center;
+
     color: whitesmoke;
-    
+
 }
 
 .chatleft {
@@ -101,29 +101,31 @@ section {
     text-align: left;
     display: flex;
     flex-direction: row;
-    align-items:flex-end;
+    align-items: flex-end;
     border-radius: 20px;
     background-color: #9bc8f7;
-    
-    
-    
+
+
+
 }
 
-p{
-    
+p {
+
     padding: 10px;
     width: 80%;
-    overflow-y: auto; /* Hace que el texto se ajuste automáticamente */
-  word-wrap: break-word;
-    
+    overflow-y: auto;
+    /* Hace que el texto se ajuste automáticamente */
+    word-wrap: break-word;
+
 }
 
-.mensaje{
-  padding: 10px;
-  
-    
+.mensaje {
+    padding: 10px;
+
+
 }
-.chat-avatar{
+
+.chat-avatar {
     margin-right: 10px;
     margin-left: 10px;
     text-align: center;
@@ -131,10 +133,10 @@ p{
     align-self: center;
 }
 
-.chat-hour{
+.chat-hour {
     font-size: 12px;
     display: flex;
-    align-self:center;
+    align-self: center;
     padding: 10px;
 }
 
@@ -142,14 +144,14 @@ p{
 .chatright {
     float: right;
     width: 100%;
-        text-align:justify;
-       display: flex;
-       align-items: flex-end;
-        flex-direction: row-reverse;
+    text-align: justify;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
     border-radius: 20px;
     background-color: #b8d9fc;
     /* light blue */
-    
+
 }
 
 .chatlist {
@@ -159,7 +161,7 @@ p{
 
 }
 
-ul  {
+ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -172,29 +174,48 @@ ul  {
 }
 
 .chats_user {
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 0;
     background-color: rgb(128, 216, 241);
     border-bottom: 2px solid rgb(97, 194, 221);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .person {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
 
 }
 
 .user-time {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.last-mensage {
     padding: 10px;
+    margin-right: 10px;
+    width: 70%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: start;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
 }
 
-.card-footer{
+.card-footer {
     padding: 10px;
-    background-color: white !important;
-   
+    background-color: rgb(207, 207, 207) !important;
+
+
 }
 
 img {
@@ -202,4 +223,3 @@ img {
     height: 50px;
     border-radius: 30px;
 }
-
