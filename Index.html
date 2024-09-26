@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/Css/style.css">
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="stylesheet" href="Assets/Css/style.css">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+    <!--Barra de navegacion-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Mi tienda</a>
@@ -43,124 +46,612 @@
                         <a class="nav-link" href="#">Administración de perfil de usuario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Chat para vendedores y equipo de soporte</a>
+                        <a class="nav-link" id="chatweb" href="#chatweb">Chat para vendedores y equipo de soporte</a>
                     </li>
                 </ul>
 
             </div>
         </div>
     </nav>
+    <section id="chatweb">
 
-    <div class="chat">
-        <div class="chat__users">
+        <div class="chatlist" id="chatlist">
+            <!--Buscador de conversaciones-->
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Conversaciones" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
-            <ul>
-                <li>
-                    <div class="users">
-                        <a href="#" style="text-decoration: none;">
-                            <img src="Assets/Img/users.jpg" alt="">
-                            <span>Pedro</span>
-                            <span>12/09/2024 12:32</span>
+            <!--chat recientes-->
+            <ul class="Lastchats">
+                <li class="chats_user" id="user1">
+                    <div class="avatar" id="user1-avatar">
+                        <img src="Assets/Img/user1.jpg" alt="Foto de perfil">
+                        <p class="user-time-last">
+                            <span class="user" id="name-user1">Cristi Ventas</span>
+                            <span class="time" id="time-user1">15:07</span>
+                        </p>
+                        <span class="status offline" id="status-user1"></span>
                     </div>
-                    </a>
+                    <p class="last-message" id="last-message-user1">yo: gracias, estare antento</p>
                 </li>
-                <li>
-                    <div class="users">
-                        <img src="Assets/Img/users.jpg" alt="">
-                        <span>Sofia</span>
-                        <span>11/09/2024 17:01</span>
+                <li class="chats_user" id="user2">
+                    <div class="avatar" id="user1-avatar">
+                        <img src="Assets/Img/user2.jpg" alt="Foto de perfil">
+                        <p class="user-time-last">
+                            <span class="user" id="name-user2">Mario Devoluciones</span>
+                            <span class="time" id="time-user2">17/09/2024</span>
+                        </p>
+                        <span class="status offline" id="status-user2"></span>
                     </div>
+                    <p class="last-message" id="last-message-user2">entiendo necesito que me envie al correo
+                        postventa@mitienda.cl una foto de los
+                        productos que no son los que pidio, para gestionar el cambio o devolucion</p>
                 </li>
-                <li>
-                    <div class="users">
-                        <img src="Assets/Img/users.jpg" alt="">
-                        <span>Juan</span>
-                        <span>02/05/2024 09:12</span>
+
+                <li class="chats_user" id="user3">
+                    <div class="avatar" id="user3-avatar">
+                        <img src="Assets/Img/user3.jpg" alt="Foto de perfil">
+                        <p class="user-time-last">
+                            <span class="user" id="name-user3">Juan despacho</span>
+                            <span class="time" id="time-user3">16:33</span>
+                        </p>
+                        <span class="status offline" id="status-user3"></span>
                     </div>
+                    <p class="last-message" id="last-message-user3">yo: muchas gracias, estare atento</p>
                 </li>
-                <li>
-                    <div class="users">
-                        <img src="Assets/Img/users.jpg" alt="">
-                        <span>Carolina</span>
-                        <span>12/02/2024 21:44</span>
+
+                <li class="chats_user" id="user4">
+                    <div class="avatar" id="user4-avatar">
+                        <img src="Assets/Img/user4.jpg" alt="Foto de perfil">
+                        <p class="user-time-last">
+                            <span class="user" id="name-user4">Julia Soporte</span>
+                            <span class="time" id="time-user4">17/09/2024</span>
+                        </p>
+                        <span class="status offline" id="status-user4"></span>
                     </div>
+                    <p class="last-message" id="last-message-user4">En que podemos ayudarlo?</p>
                 </li>
+
+                <li class="chats_user" id="user5">
+                    <div class="avatar" id="user5-avatar">
+                        <img src="Assets/Img/user5.jpg" alt="Foto de perfil">
+                        <p class="user-time-last">
+                            <span class="user" id="name-user5">Sandra Cotizaciones</span>
+                            <span class="time" id="time-user5">09:28</span>
+                        </p>
+                        <span class="status offline" id="status-user5"></span>
+                    </div>
+                    <p class="last-message" id="last-message-user5">En que podemos ayudarlo?</p>
+                </li>
+
             </ul>
+
         </div>
-        <div class="chat__item">
-            <div class="chat__item__header">
-                <h2 class="chat__item__header__title"> Chat vendedor 1</h2>
-            </div>
-            <div class="chat__item__header__text">
-                <div class="chatleft">
-                    <p>jkalslsda</p>
-                </div>
-                <div class="chatright">
-                    <p>hola</p>
-                </div>
-                <div class="chatleft">
-                    <p>jkalslsda</p>
-                </div>
 
-                <div class="chatright">
-                    <p>hola</p>
-                </div>
-                <div class="chatleft">
-                    <p>jkalslsda</p>
-                </div>
+        <div class="chatbox" id="chat-user1">
 
-                <div class="chatright">
-                    <p>hola</p>
-                </div>
-                <div class="chatleft">
-                    <p>jkalslsda</p>
-                </div>
 
-                <div class="chatright">
-                    <p>hola</p>
-                </div>
-                <div class="chatleft">
-                    <p>jkalslsda</p>
-                </div>
+            <div class="chatbox-header">
 
-                <div class="chatright">
-                    <p>hola</p>
-                </div>
-            </div>
-            <div class="text-send">
-                <form class="d-flex" role="search">
-                    <textarea name="chat" id="chat1"></textarea>
-                    <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                <div class="chatbox-avatar" id="user1-avatar">
+                    <img id="avatar1" src="Assets/Img/user1.jpg" alt="Retail Admin">
+                    <div class="chat-name" id="name-user1">Cristi Ventas</div>
+                    <div class="status online" id="status-user1">online
                     </div>
-                    <button class="btn btn-outline-success" type="submit">Enviar</button>
-                </form>
+                </div>
             </div>
+
+
+            <ul class="messages">
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user1.jpg" alt="Retail Admin">
+                        <div class="chat-name">Cristi Ventas</div>
+
+                    </div>
+                    <p class="message">Hola, me comunico con ud por la cotizacion realizada</p>
+                    <div class="chat-hour">10:33 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message">perfecto, me gustaria saber el valor final</p>
+                    <div class="chat-hour">12:00 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user1.jpg" alt="Retail Admin">
+                        <div class="chat-name">Cristi Ventas</div>
+
+                    </div>
+                    <p class="message">indiqueme su correo para enviarle nuestra cotizacion</p>
+                    <div class="chat-hour">12:02 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message"> favor de enviar la cotizacion a cotizaciones@pepito.com</p>
+                    <div class="chat-hour">12:17 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user1.jpg" alt="Retail Admin">
+                        <div class="chat-name">Cristi Ventas</div>
+
+                    </div>
+                    <p class="message">perfecto, ahora mismo le estoy enviando la cotizacion.</p>
+                    <div class="chat-hour">12:18 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message"> muchas gracias, la revisare y me pondre en contacto con ud.</p>
+                    <div class="chat-hour">12:22 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user1.jpg" alt="Retail Admin">
+                        <div class="chat-name">Cristi Ventas</div>
+
+                    </div>
+                    <p class="message">de nada, cualquier consulta me habla y le respondere a la brevedad</p>
+                    <div class="chat-hour">12:34 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message">esta todo ok. realizare la compra.</p>
+                    <div class="chat-hour">14:43 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user1.jpg" alt="Retail Admin">
+                        <div class="chat-name">Cristi Ventas</div>
+
+                    </div>
+                    <p class="message">perfecto, cuando este confirmado el pago la llamaran del departamento de despacho
+                        para la entrega.</p>
+                    <div class="chat-hour">15:07 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message"> gracias, estare antento</p>
+                    <div class="chat-hour">15:10 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+
+            </ul>
+
+            <br>
+            <br>
+            <br>
+
+
+
+            <div class="card-footer">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fas fa-paperclip"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item btn btn-outline-secondary"><i class="fa-solid fa-video"></i>
+                                Video</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-primary"><i class="fa fa-image"></i>Imágen</a>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-info"><i class="fa-solid fa-file"></i>
+                                Documento</a> </li>
+                    </ul>
+                    <div class="input-group-append">
+                        <a class="form-control text-info" href="#" data-abc="true">
+                            <i class="fa fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="chatbox" id="chat-user2">
+
+
+            <div class="chatbox-header">
+
+                <div class="chatbox-avatar" id="user2-avatar">
+                    <img id="avatar2"
+                        src="Assets/Img/user2.jpg" alt="Retail Admin">
+                    <div class="chat-name" id="name-user2">Mario Devoluciones</div>
+                    <div class="status bussy" id="status-user2">ocupado
+                    </div>
+                </div>
+            </div>
+
+
+            <ul class="messages">
+
+
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message">hola, necesito hacer una devolucion</p>
+                    <div class="chat-hour">15:33 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user2.jpg" alt="Retail Admin">
+                        <div class="chat-name">Mario Devoluciones</div>
+
+                    </div>
+                    <p class="message">indiqueme que inconveniente tiene</p>
+                    <div class="chat-hour">15:54 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message"> me llego un producto con una medida distinta a la que solicite</p>
+                    <div class="chat-hour">16:02 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user2.jpg"
+                            alt="Retail Admin">
+                        <div class="chat-name">Mario Devoluciones</div>
+
+                    </div>
+                    <p class="message">entiendo necesito que me envie al correo postventa@mitienda.cl una foto de los
+                        productos que no son los que pidio, para gestionar el cambio o devolucion</p>
+                    <div class="chat-hour">16:05 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+
+            </ul>
+
+
+
+            <br>
+            <br>
+            <br>
+
+            <div class="card-footer">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fas fa-paperclip"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item btn btn-outline-secondary"><i class="fa-solid fa-video"></i>
+                                Video</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-primary"><i class="fa fa-image"></i>Imágen</a>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-info"><i class="fa-solid fa-file"></i>
+                                Documento</a> </li>
+                    </ul>
+                    <div class="input-group-append">
+                        <a class="form-control text-info" href="#" data-abc="true">
+                            <i class="fa fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="chatbox" id="chat-user3">
+
+
+            <div class="chatbox-header">
+
+                <div class="chatbox-avatar" id="user3-avatar">
+                    <img id="avatar3"
+                        src="Assets/Img/user3.jpg"
+                        alt="Retail Admin">
+                    <div class="chat-name" id="name-user3">Juan despacho</div>
+                    <div class="status online" id="status-user3">online
+                    </div>
+                </div>
+            </div>
+
+
+            <ul class="messages">
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user3.jpg"
+                            alt="Retail Admin">
+                        <div class="chat-name">Juan despacho</div>
+
+                    </div>
+                    <p class="message">Hola, me comunico con ud por el despacho N°2351</p>
+                    <div class="chat-hour">16:19 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message">cuenteme</p>
+                    <div class="chat-hour">16:27 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user3.jpg"
+                            alt="Retail Admin">
+                        <div class="chat-name">Juan despacho</div>
+
+                    </div>
+                    <p class="message">hoy ha sido despachado su pedido, llegaran dentro de 2 horas</p>
+                    <div class="chat-hour">16:28 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message"> muchas gracias, estare atento</p>
+                    <div class="chat-hour">16:33 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+
+            </ul>
+
+            <br>
+            <br>
+            <br>
+
+
+
+            <div class="card-footer">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fas fa-paperclip"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item btn btn-outline-secondary"><i class="fa-solid fa-video"></i>
+                                Video</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-primary"><i class="fa fa-image"></i>Imágen</a>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-info"><i class="fa-solid fa-file"></i>
+                                Documento</a> </li>
+                    </ul>
+                    <div class="input-group-append">
+                        <a class="form-control text-info" href="#" data-abc="true">
+                            <i class="fa fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="chatbox" id="chat-user4">
+
+
+            <div class="chatbox-header">
+
+                <div class="chatbox-avatar" id="user4-avatar">
+                    <img id="avatar4"
+                        src="Assets/Img/user4.jpg"
+                        alt="Retail Admin">
+                    <div class="chat-name" id="name-user2">Julia Soporte</div>
+                    <div class="status online" id="status-user2">online
+                    </div>
+                </div>
+            </div>
+
+
+            <ul class="messages">
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message">hola, necesito ayuda con un producto</p>
+                    <div class="chat-hour">16:27 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user4.jpg"
+                            alt="Retail Admin">
+                        <div class="chat-name">Julia Soporte</div>
+
+                    </div>
+                    <p class="message">En que podemos ayudarlo?</p>
+                    <div class="chat-hour">16:28 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+
+            </ul>
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <div class="card-footer">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fas fa-paperclip"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item btn btn-outline-secondary"><i class="fa-solid fa-video"></i>
+                                Video</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-primary"><i class="fa fa-image"></i>Imágen</a>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-info"><i class="fa-solid fa-file"></i>
+                                Documento</a> </li>
+                    </ul>
+                    <div class="input-group-append">
+                        <a class="form-control text-info" href="#" data-abc="true">
+                            <i class="fa fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="chatbox" id="chat-user5">
+
+
+            <div class="chatbox-header">
+
+                <div class="chatbox-avatar" id="user5-avatar">
+                    <img id="avatar5" src="Assets/Img/user5.jpg" alt="Retail Admin">
+                    <div class="chat-name" id="name-user2">Sandra Cotizaciones</div>
+                    <div class="status offline" id="status-user2">offline
+                    </div>
+                </div>
+            </div>
+
+
+            <ul class="messages">
+                <li class="chatright">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/me.jpg" alt="">
+                        <div class="chat-name">Jose Perez</div>
+
+                    </div>
+                    <p class="message">hola, necesito realizar una cotizacion</p>
+                    <div class="chat-hour">09:21 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+                <li class="chatleft">
+                    <div class="chat-avatar">
+                        <img src="Assets/Img/user5.jpg"
+                            alt="Retail Admin">
+                        <div class="chat-name">Sandra Cotizaciones</div>
+
+                    </div>
+                    <p class="message">En que podemos ayudarlo?</p>
+                    <div class="chat-hour">09:28 <span class="fa fa-check-circle"></span>
+                    </div>
+                </li>
+
+            </ul>
+
+            <br>
+            <br>
+            <br>
+
+
+
+            <div class="card-footer">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"><i class="fas fa-paperclip"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item btn btn-outline-secondary"><i class="fa-solid fa-video"></i>
+                                Video</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-primary"><i class="fa fa-image"></i>Imágen</a>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        </li>
+                        <li><a class="dropdown-item btn btn-outline-info"><i class="fa-solid fa-file"></i>
+                                Documento</a> </li>
+                    </ul>
+                    <div class="input-group-append">
+                        <a class="form-control text-info" href="#" data-abc="true">
+                            <i class="fa fa-paper-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
 
-    </div>
-    </div>
 
 
 
-
-    <script href="Assets/Js/script.js"></script>
+    </section>
+    <script src="Assets/Js/logic-img.js"></script>
+    <script src="Assets/Js/logic.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
